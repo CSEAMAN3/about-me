@@ -43,6 +43,14 @@
 
 let points = 0;
 
+function alertUnknownAnswer(data, question) {
+  while (data != "yes" && data != "y" && data != "no" && data != "n") {
+    alert("Please answer using Yes, Y, No or N only");
+    data = prompt(question).toLowerCase();
+  }
+  return data;
+}
+
 document.getElementById("quiz-btn").addEventListener("click", function () {
   let user = prompt(
     "Hi, Chris here, tell me your name and we will start the quiz."
@@ -58,6 +66,11 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   let city = prompt(
     "Born and raised, Norfolk is my home, but have I lived here all my life?"
   ).toLowerCase();
+
+  alertUnknownAnswer(
+    city,
+    "Born and raised, Norfolk is my home, but have I lived here all my life?"
+  );
 
   if (city === "yes" || city === "y") {
     alert("Well done, great start. Norwich really is a fine city!");
@@ -99,23 +112,29 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   if (goal === "yes" || goal === "y") {
     alert("Hell yeah, Sukerberg watch out");
     points++;
-  } else if (work === "no" || work === "n") {
+  } else if (goal === "no" || goal === "n") {
     alert(
       "You really don't know me very well " + user + ", Sukerberg watch out"
     );
   }
 
   // question 5
-  let goals = prompt(
+  let quiz = prompt(
     "Final question, if you get this question correct will you have answered " +
       `${points + 1}` +
       " questions correct?"
   );
 
-  if (goals === "yes" || goals === "y") {
+  if (quiz === "yes" || quiz === "y") {
     points++;
     alert("well done, you have answered " + points + " question correct");
-  } else if (goals === "no" || goals === "n") {
-    alert("You can't even count " + user + ", life is gonna be hard!");
+  } else if (quiz === "no" || quiz === "n") {
+    alert(
+      "You can't even count " +
+        user +
+        ", life is gonna be hard! You got " +
+        points +
+        " correct!"
+    );
   }
 });
