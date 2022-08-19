@@ -115,7 +115,7 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   if (goals === "yes" || goals === "y") {
     points++;
     alert("well done, you have answered " + points + " question correct");
-  } else if (work === "no" || work === "n") {
+  } else if (goals === "no" || goals === "n") {
     alert("You can't even count " + user + ", life is gonna be hard!");
   }
 });
