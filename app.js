@@ -55,7 +55,6 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   let user = prompt(
     "Hi, Chris here, tell me your name and we will start the quiz."
   );
-  console.log("the users name is " + user);
 
   alert(
     "Hi " +
@@ -83,6 +82,11 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     "Have I studied a degree in Media-Moving Image?"
   ).toLowerCase();
 
+  alertUnknownAnswer(
+    education,
+    "Have I studied a degree in Media-Moving Image?"
+  );
+
   if (education === "yes" || education === "y") {
     alert(
       "Almost " +
@@ -100,6 +104,11 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     "Was I the owner of a local made to measure blind business?"
   );
 
+  alertUnknownAnswer(
+    work,
+    "Was I the owner of a local made to measure blind business?"
+  );
+
   if (work === "yes" || work === "y") {
     alert("Good answer! Couple more questions to go!");
     points++;
@@ -108,6 +117,11 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   }
   // question 4
   let goal = prompt("Is my goal to become a great web developer / designer?");
+
+  alertUnknownAnswer(
+    goal,
+    "Is my goal to become a great web developer / designer?"
+  );
 
   if (goal === "yes" || goal === "y") {
     alert("Hell yeah, Sukerberg watch out");
@@ -125,9 +139,22 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
       " questions correct?"
   );
 
+  alertUnknownAnswer(
+    quiz,
+    "Final question, if you get this question correct will you have answered " +
+      `${points + 1}` +
+      " questions correct?"
+  );
+
   if (quiz === "yes" || quiz === "y") {
     points++;
-    alert("well done, you have answered " + points + " question correct");
+    alert(
+      "well done " +
+        user +
+        ", you have answered " +
+        points +
+        " question correct"
+    );
   } else if (quiz === "no" || quiz === "n") {
     alert(
       "You can't even count " +
