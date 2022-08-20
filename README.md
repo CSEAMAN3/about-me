@@ -51,8 +51,15 @@ Part 1
 1. Create a top ten list
 2. convert work experience and education into an unordered list.
 
-Part 2 3) Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number. 4) Indicates through an alert if the guess is “too high” or “too low”. 5) It should give the user exactly four opportunities to get the correct answer. 6) After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
+3. Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
+4. Indicates through an alert if the guess is “too high” or “too low”.
+5. It should give the user exactly four opportunities to get the correct answer.
+6. After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
 
-Part 3 7) Add a 7th question that has multiple possible correct answers that are stored in an array. 8) Give the user 6 attempts to guess the correct answer. 9) The guesses will end once the user guesses a correct answer or they run out of attempts. 10) Display all the possible correct answers to the user. 11) Consider using a loop of some sort for this question.
+7. Add a 7th question that has multiple possible correct answers that are stored in an array.
+8. Give the user 6 attempts to guess the correct answer.
+9. The guesses will end once the user guesses a correct answer or they run out of attempts.
+10. Display all the possible correct answers to the user.
+11. Consider using a loop of some sort for this question.
 
-Part 4 12) Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.
+12. Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.

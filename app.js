@@ -2,13 +2,13 @@
 
 let points = 0;
 
-function alertUnknownAnswer(data, question) {
-  while (data != "yes" && data != "y" && data != "no" && data != "n") {
-    alert("Please answer using Yes, Y, No or N only");
-    data = prompt(question).toLowerCase();
-  }
-  return data;
-}
+// function alertUnknownAnswer(data, question) {
+//   while (data != "yes" && data != "y" && data != "no" && data != "n") {
+//     alert("Please answer using Yes, Y, No or N only");
+//     data = prompt(question).toLowerCase();
+//   }
+//   return data;
+// }
 
 document.getElementById("quiz-btn").addEventListener("click", function () {
   let user = prompt(
@@ -16,19 +16,24 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   );
 
   alert(
-    "Hi " +
-      user +
-      ", nice to meet you! Please answer the following questions with a Yes, Y, No or N response only. Lets see how well you really know me!"
+    `Hi ${user}, nice to meet you! Please answer the following questions with a Yes, Y, No or N response only. Lets see how well you really know me!`
   );
   // question 1
   let city = prompt(
     "Born and raised, Norfolk is my home, but have I lived here all my life?"
   ).toLowerCase();
 
-  alertUnknownAnswer(
-    city,
-    "Born and raised, Norfolk is my home, but have I lived here all my life?"
-  );
+  // alertUnknownAnswer(
+  //   city,
+  //   "Born and raised, Norfolk is my home, but have I lived here all my life?"
+  // );
+
+  while (city != "yes" && city != "y" && city != "no" && city != "n") {
+    alert(`${user}, please answer using Yes, Y, No or N only`);
+    city = prompt(
+      "Born and raised, Norfolk is my home, but have I lived here all my life?"
+    ).toLowerCase();
+  }
 
   if (city === "yes" || city === "y") {
     alert("Well done, great start. Norwich really is a fine city!");
@@ -41,10 +46,22 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     "Have I studied a degree in Media-Moving Image?"
   ).toLowerCase();
 
-  alertUnknownAnswer(
-    education,
-    "Have I studied a degree in Media-Moving Image?"
-  );
+  // alertUnknownAnswer(
+  //   education,
+  //   "Have I studied a degree in Media-Moving Image?"
+  // );
+
+  while (
+    education != "yes" &&
+    education != "y" &&
+    education != "no" &&
+    education != "n"
+  ) {
+    alert(`${user}, please answer using Yes, Y, No or N only`);
+    education = prompt(
+      "Have I studied a degree in Media-Moving Image?"
+    ).toLowerCase();
+  }
 
   if (education === "yes" || education === "y") {
     alert(
@@ -60,12 +77,19 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   // question 3
   let work = prompt(
     "Was I the owner of a local made to measure blind business?"
-  );
+  ).toLowerCase();
 
-  alertUnknownAnswer(
-    work,
-    "Was I the owner of a local made to measure blind business?"
-  );
+  // alertUnknownAnswer(
+  //   work,
+  //   "Was I the owner of a local made to measure blind business?"
+  // );
+
+  while (work != "yes" && work != "y" && work != "no" && work != "n") {
+    alert(`${user}, please answer using Yes, Y, No or N only`);
+    work = prompt(
+      "Was I the owner of a local made to measure blind business?"
+    ).toLowerCase();
+  }
 
   if (work === "yes" || work === "y") {
     alert("Good answer! Couple more questions to go!");
@@ -74,12 +98,21 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     alert("Bad answer! I did! Couple more questions to go!");
   }
   // question 4
-  let goal = prompt("Is my goal to become a great web developer / designer?");
-
-  alertUnknownAnswer(
-    goal,
+  let goal = prompt(
     "Is my goal to become a great web developer / designer?"
-  );
+  ).toLowerCase();
+
+  // alertUnknownAnswer(
+  //   goal,
+  //   "Is my goal to become a great web developer / designer?"
+  // );
+
+  while (goal != "yes" && goal != "y" && goal != "no" && goal != "n") {
+    alert(`${user}, please answer using Yes, Y, No or N only`);
+    goal = prompt(
+      "Is my goal to become a great web developer / designer?"
+    ).toLowerCase();
+  }
 
   if (goal === "yes" || goal === "y") {
     alert("Hell yeah, Sukerberg watch out");
@@ -93,14 +126,23 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     `Final question, if you get this question correct will you have answered ${
       points + 1
     } questions correct?`
-  );
+  ).toLowerCase();
 
-  alertUnknownAnswer(
-    quiz,
-    `Final question, if you get this question correct will you have answered ${
-      points + 1
-    } questions correct`
-  );
+  // alertUnknownAnswer(
+  //   quiz,
+  //   `Final question, if you get this question correct, will you have answered ${
+  //     points + 1
+  //   } questions correct?`
+  // );
+
+  while (quiz != "yes" && quiz != "y" && quiz != "no" && quiz != "n") {
+    alert(`${user}, please answer using Yes, Y, No or N only`);
+    quiz = prompt(
+      `Final question, if you get this question correct will you have answered ${
+        points + 1
+      } questions correct?`
+    ).toLowerCase();
+  }
 
   if (quiz === "yes" || quiz === "y") {
     points++;
@@ -109,7 +151,7 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     );
   } else if (quiz === "no" || quiz === "n") {
     alert(
-      `you cant even count ${user}, life is gonna be hard! You answered ${points} correct.`
+      `You cant even count ${user}, life is gonna be hard! You answered ${points} correct.`
     );
   }
 });
