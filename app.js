@@ -1,46 +1,5 @@
 // "use strict";
 
-// console.log("I am here");
-
-// let user = prompt("what is your name");
-
-// console.log("the user name is " + user);
-
-// let color = prompt("What is your favourite color?");
-
-// console.log("Your favourite is " + color);
-
-// alert("Hi there " + user + ". your favourite color is " + color);
-
-//
-
-// function quiz() {
-//   let user = prompt(
-//     "Hi, Chris here, tell me your name and we'll start the quiz!"
-//   );
-
-//   console.log("the user name is " + user);
-
-//   alert(
-//     "Hi " +
-//       user +
-//       ", nice to meet you. Please answer the following questions with a Yes or No response only. Lets see how well you really know me!"
-//   );
-
-//   let city = prompt(
-//     "Born and raised, Norfolk is my home, but have I lived here all my life?"
-//   ).toLowerCase();
-
-//   if (city === yes) {
-//     alert("Well done, great start. Norwich really is a fine city!");
-//     points++;
-//   } else if (city === no) {
-//     alert("That's not correct! Did you fall asleep reading my Bio");
-//   } else {
-//     alert("Please enter a Yes or No response only");
-//   }
-// }
-
 let points = 0;
 
 function alertUnknownAnswer(data, question) {
@@ -89,16 +48,15 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
 
   if (education === "yes" || education === "y") {
     alert(
-      "Almost " +
-        user +
-        ", but you're wrong, I studied a national diploma as well as a higher national diploma!"
+      `Almost ${user}, but you're wrong. I have studied a National diploma and Higher National Diploma.`
     );
   } else if (education === "no" || education === "n") {
     alert(
-      "Bingo, you're correct! It was actually a national diploma as well as a higher national diploma I studied."
+      `Bingo, you're correct! It was actually a National Diploma as well as a Higher National Diploma`
     );
     points++;
   }
+
   // question 3
   let work = prompt(
     "Was I the owner of a local made to measure blind business?"
@@ -127,41 +85,31 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
     alert("Hell yeah, Sukerberg watch out");
     points++;
   } else if (goal === "no" || goal === "n") {
-    alert(
-      "You really don't know me very well " + user + ", Sukerberg watch out"
-    );
+    alert(`You really dont know me very well ${user}, Sukerberg watch out`);
   }
 
   // question 5
   let quiz = prompt(
-    "Final question, if you get this question correct will you have answered " +
-      `${points + 1}` +
-      " questions correct?"
+    `Final question, if you get this question correct will you have answered ${
+      points + 1
+    } questions correct?`
   );
 
   alertUnknownAnswer(
     quiz,
-    "Final question, if you get this question correct will you have answered " +
-      `${points + 1}` +
-      " questions correct?"
+    `Final question, if you get this question correct will you have answered ${
+      points + 1
+    } questions correct`
   );
 
   if (quiz === "yes" || quiz === "y") {
     points++;
     alert(
-      "well done " +
-        user +
-        ", you have answered " +
-        points +
-        " question correct"
+      `Well done ${user}, you have answered ${points} questions correctly.`
     );
   } else if (quiz === "no" || quiz === "n") {
     alert(
-      "You can't even count " +
-        user +
-        ", life is gonna be hard! You got " +
-        points +
-        " correct!"
+      `you cant even count ${user}, life is gonna be hard! You answered ${points} correct.`
     );
   }
 });

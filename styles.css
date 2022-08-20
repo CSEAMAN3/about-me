@@ -37,6 +37,10 @@ body {
   padding: 2em 0;
 }
 
+p {
+  margin-bottom: 1em;
+}
+
 header {
   width: 90%;
   max-width: 1024px;
@@ -184,7 +188,7 @@ Media Queries
     width: 60%;
   }
 
-  .education {
+  .goals {
     margin-left: 0.5em;
     width: 40%;
   }
@@ -193,11 +197,11 @@ Media Queries
     flex-direction: row;
   }
 
-  .work {
+  .education {
     margin-right: 0.5em;
   }
 
-  .goals {
+  .work {
     margin-left: 0.5em;
     margin-right: 0.5em;
   }
@@ -206,8 +210,8 @@ Media Queries
     margin-left: 0.5em;
   }
 
-  .work,
-  .goals {
+  .education,
+  .work {
     width: 30%;
     border-bottom: 2px solid var(--p);
   }
