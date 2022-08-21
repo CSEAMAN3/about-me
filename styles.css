@@ -167,8 +167,56 @@ main {
   color: var(--lb);
 }
 
+.topTen-list {
+  margin-top: 0.5em;
+}
+
+.topTen-List-Item {
+  display: none;
+  font-size: 1.5rem;
+}
+.topTen-List-Item-visible {
+  display: block;
+}
+
+.nxt-btn {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--db);
+  background-color: var(--y);
+  border: 2px solid var(--y);
+  border-radius: 2px;
+  width: 100%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 250ms transform ease;
+}
+
+.nxt-btn:hover,
+.next-btn:active {
+  transform: scale(1.02);
+  background-color: var(--dy);
+}
+
+.quiz-btn-container {
+  position: relative;
+  padding-top: 200px;
+}
+
+.fa-brain {
+  position: absolute;
+  top: 0.12em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--lb);
+}
+
 .quiz-btn {
   width: 100%;
+  min-height: 100px;
   font-family: inherit;
   font-size: 2rem;
   font-weight: 700;

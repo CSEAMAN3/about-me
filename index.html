@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/4d353b9c2f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -125,15 +129,39 @@
           </ul>
         </section>
         <section class="quiz">
-          <button id="quiz-btn" class="quiz-btn">
-            <span class="quiz-btn-content">Start Quiz</span>
-          </button>
+          <div class="topTen-container">
+            <h2 class="section-heading">Top Ten Movies</h2>
+
+            <ol class="topTen-list">
+              <li class="topTen-List-Item topTen-List-Item-visible">
+                Kung Fu Panda
+              </li>
+              <li class="topTen-List-Item">Gaurdians of the Galaxy</li>
+              <li class="topTen-List-Item">Star Wars Solo</li>
+              <li class="topTen-List-Item">Wolf of Wall St</li>
+              <li class="topTen-List-Item">Golden Eye</li>
+              <li class="topTen-List-Item">Bourne Identity</li>
+              <li class="topTen-List-Item">Pulp Fiction</li>
+              <li class="topTen-List-Item">Alladin</li>
+              <li class="topTen-List-Item">Central Intelligence</li>
+              <li class="topTen-List-Item">Django</li>
+            </ol>
+
+            <button id="nextBtn" class="nxt-btn">Next</button>
+          </div>
+
+          <div class="quiz-btn-container">
+            <i class="fa-solid fa-brain fa-10x"></i>
+            <button id="quiz-btn" class="quiz-btn">
+              <span class="quiz-btn-content">Start Quiz</span>
+            </button>
+          </div>
         </section>
       </div>
     </main>
 
     <footer></footer>
-
+    <script src="carousel.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

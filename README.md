@@ -49,7 +49,7 @@ Lab 03
 Part 1
 
 1. Create a top ten list
-2. convert work experience and education into an unordered list.
+2. convert work experience and education into an unordered list. - completed.
 
 3. Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
 4. Indicates through an alert if the guess is “too high” or “too low”.
