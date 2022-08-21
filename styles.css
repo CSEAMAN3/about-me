@@ -179,7 +179,52 @@ main {
   display: block;
 }
 
-.nxt-btn {
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nxt-btn,
+.prev-btn {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--y);
+  background-color: transparent;
+  border: 2px solid var(--y);
+  border-radius: 2px;
+  width: 48%;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 250ms transform ease;
+}
+
+.nxt-btn:hover,
+.next-btn:active,
+.prev-btn:hover,
+.prev-btn:active {
+  transform: scale(1.02);
+  border-color: var(--p);
+  color: var(--p);
+}
+
+.quiz-btn-container {
+  position: relative;
+  margin-top: 16px;
+}
+
+.quiz-content {
+  margin: 2em 0 1em 0;
+}
+
+.fa-brain {
+  transform: rotate(45deg);
+  color: var(--lb);
+}
+
+.quiz-btn {
   font-family: inherit;
   font-size: 2rem;
   font-weight: 700;
@@ -193,40 +238,6 @@ main {
   cursor: pointer;
   transform: scale(1);
   transition: 250ms transform ease;
-}
-
-.nxt-btn:hover,
-.next-btn:active {
-  transform: scale(1.02);
-  background-color: var(--dy);
-}
-
-.quiz-btn-container {
-  position: relative;
-  padding-top: 200px;
-}
-
-.fa-brain {
-  position: absolute;
-  top: 0.12em;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--lb);
-}
-
-.quiz-btn {
-  width: 100%;
-  min-height: 100px;
-  font-family: inherit;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--db);
-  background-color: var(--y);
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transform: scale(1);
-  transition: 500ms transform ease;
 }
 
 .quiz-btn:hover,
@@ -302,16 +313,6 @@ Media Queries
   .quiz-btn {
     width: 100%;
     height: 100%;
-  }
-
-  /* .quiz-btn{
-    position: relative;
-  } */
-
-  .quiz-btn-content {
-    position: absolute;
-    bottom: 0.5em;
-    right: 1em;
   }
 
   footer {

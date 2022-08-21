@@ -48,7 +48,7 @@ Lab 03
 
 Part 1
 
-1. Create a top ten list
+1. Create a top ten list - completed but unnumbered.
 2. convert work experience and education into an unordered list. - completed.
 
 3. Add a 6th question to the guessing game that takes in a numeric input by prompting the user to guess a number.
