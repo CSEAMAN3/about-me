@@ -207,7 +207,7 @@ function q6() {
 
 document.getElementById("quiz-btn").addEventListener("click", function () {
   user = prompt(
-    "Hi, Chris here, tell me your name and we will start the quiz."
+    "Hi, Chris here, tell me your name and we will start the quiz.?"
   );
 
   alert(
