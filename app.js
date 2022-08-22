@@ -1,7 +1,6 @@
 // "use strict";
 
 let points = 0;
-const number = Math.floor(Math.random() * 10) + 1;
 let attempts = 5;
 let holiday = ["mexico", "turkey", "france"];
 
@@ -16,13 +15,7 @@ let holiday = ["mexico", "turkey", "france"];
 // let favouriteNumber = document
 //   .getElementById("quiz-btn")
 //   .addEventListener("click", function () {
-let user = prompt(
-  "Hi, Chris here, tell me your name and we will start the quiz."
-);
-
-alert(
-  `Hi ${user}, nice to meet you! Please answer the following questions with a Yes, Y, No or N response only. Lets see how well you really know me!`
-);
+let user;
 // question 1
 function q1() {
   let city = prompt(
@@ -48,7 +41,7 @@ function q1() {
     alert("That's not correct! Did you fall asleep reading my Bio");
   }
 }
-q1();
+
 function q2() {
   // question 2
   let education = prompt(
@@ -83,7 +76,6 @@ function q2() {
     points++;
   }
 }
-q2();
 
 // question 3
 function q3() {
@@ -111,7 +103,6 @@ function q3() {
   }
 }
 
-q3();
 // question 4
 function q4() {
   let goal = prompt(
@@ -137,7 +128,6 @@ function q4() {
     alert(`You really dont know me very well ${user}, Sukerberg watch out`);
   }
 }
-q4();
 
 // question 5
 function q5() {
@@ -174,52 +164,55 @@ function q5() {
     );
   }
 }
-q5();
+
 // question 6
 function q6() {
+  const number = Math.floor(Math.random() * 10) + 1;
+  console.log(number);
   let guess = prompt(
-    `I'm thinking of a number between 1 and 10, please guess the number? You have ${attempts} attempts to get it right!`
+    `I'm thinking of a number between 1 and 10, please guess the number? You have 3 attempts to get it right!`
   );
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 3; i >= 0; i--) {
+    if (i === 0) {
+      alert(
+        `Unlucky ${user}, that was you final attempt. My favourite number is ${number}.`
+      );
+      break;
+    }
     if (guess < number) {
-      attempts--;
+      // attempts--;
       alert("Too low, guess again!");
       guess = prompt(
-        `Please guess my favourite number? You now have ${
-          attempts - 1
-        } more attempts to get it right!`
+        `Please guess my favourite number? You now have ${i} more attempts to get it right!`
       );
     } else if (guess > number) {
-      attempts--;
+      // attempts--;
       alert("Too high, guess again!");
       guess = prompt(
-        `Please guess my favourite number? You now have ${
-          attempts - 1
-        } more attempts to get it right!`
+        `Please guess my favourite number? You now have ${i} more attempts to get it right!`
       );
     } else {
       points++;
       alert("congratualtions, you must be telepathic, you've read my mind");
       break;
     }
-    if (attempts === 1) {
-      alert(
-        `Unlucky ${user}, that was you final attempt. My favourite number is ${number}.`
-      );
-      break;
-    }
   }
 }
-q6();
-
 // question 7
-let country = prompt(
-  "Final question, name a country outside of the uk that I have travelled to?"
-);
+// let country = prompt(
+//   "Final question, name a country outside of the uk that I have travelled to?"
+// );
 // });
 
 document.getElementById("quiz-btn").addEventListener("click", function () {
+  user = prompt(
+    "Hi, Chris here, tell me your name and we will start the quiz."
+  );
+
+  alert(
+    `Hi ${user}, nice to meet you! Please answer the following questions with a Yes, Y, No or N response only. Lets see how well you really know me!`
+  );
   q1(); // Q1
   q2(); // Q2
   q3(); // Q3

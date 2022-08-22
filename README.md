@@ -63,3 +63,8 @@ Part 1
 11. Consider using a loop of some sort for this question.
 
 12. Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.
+
+Driver : Tim
+Navigator : Chris
+
+The code was worked on together and tested - 22/8/2022
