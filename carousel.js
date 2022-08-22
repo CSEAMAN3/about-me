@@ -10,7 +10,6 @@ function hideAllSlides() {
 
 document.getElementById("prevBtn").addEventListener("click", function () {
   hideAllSlides();
-
   if (slidePosition === 0) {
     slidePosition = totalSlides - 1;
     slides[slidePosition].classList.add("topTen-List-Item-visible");
@@ -22,7 +21,6 @@ document.getElementById("prevBtn").addEventListener("click", function () {
 
 document.getElementById("nextBtn").addEventListener("click", function () {
   hideAllSlides();
-
   if (slidePosition === totalSlides - 1) {
     slidePosition = 0;
     slides[slidePosition].classList.add("topTen-List-Item-visible");

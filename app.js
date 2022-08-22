@@ -2,7 +2,8 @@
 
 let points = 0;
 const number = Math.floor(Math.random() * 10) + 1;
-let attempts = 4;
+let attempts = 5;
+let holiday = ["mexico", "turkey", "france"];
 
 // function alertUnknownAnswer(data, question) {
 //   while (data != "yes" && data != "y" && data != "no" && data != "n") {
@@ -163,32 +164,38 @@ let favouriteNumber = document
       `I'm thinking of a number between 1 and 10, please guess the number? You have ${attempts} attempts to get it right!`
     );
 
-    for (let i = 0; i < 4; i++) {
-      if (attempts === 0) {
-        alert(
-          `Unlucky ${user}, that was you final attempt. My favourite number is ${number}.`
-        );
-        break;
-      }
+    for (let i = 0; i < 3; i++) {
       if (guess < number) {
         attempts--;
         alert("Too low, guess again!");
         guess = prompt(
-          `Please guess my favourite number? You now have ${attempts} more attempts to get it right!`
+          `Please guess my favourite number? You now have ${
+            attempts - 1
+          } more attempts to get it right!`
         );
       } else if (guess > number) {
         attempts--;
         alert("Too high, guess again!");
         guess = prompt(
-          `Please guess my favourite number? You now have ${attempts} more attempts to get it right!`
+          `Please guess my favourite number? You now have ${
+            attempts - 1
+          } more attempts to get it right!`
         );
       } else {
         points++;
         alert("congratualtions, you must be telepathic, you've read my mind");
         break;
       }
+      if (attempts === 1) {
+        alert(
+          `Unlucky ${user}, that was you final attempt. My favourite number is ${number}.`
+        );
+        break;
+      }
     }
 
     // question 7
-    let fluff = prompt("fluff");
+    let country = prompt(
+      "Final question, name a country outside of the uk that I have travelled to?"
+    );
   });
