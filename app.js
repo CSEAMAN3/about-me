@@ -220,3 +220,37 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   q5(); // Q5
   q6(); // Q6
 });
+
+/*
+function questionSix() {
+  const number = Math.floor(Math.random() * 10) + 1;
+  console.log(number);
+  let guess;
+  // let guess = prompt(
+  //   `I'm thinking of a number between 1 and 10, please guess the number? You have 4 attempts to get it right!`
+  // );
+
+  for (let i = 3; i >= 0; i--) {
+    if (i === 0) {
+      alert(
+        `Unlucky ${user}, that was your final attempt. The number I was thinking of is ${number}.`
+      );
+      break;
+    }
+
+    guess = prompt(
+      `I'm thinking of a number between 1 and 10, please guess the number? You have ${i} attempts to get it right!`
+    );
+
+    if (guess == number) {
+      points++;
+      alert(`congratualtions, you must be telepathic, you've read my mind`);
+      break;
+    } else if (guess > number) {
+      alert(`To high, guess again`);
+    } else if (guess < number) {
+      alert(`To low, guess again`);
+    }
+  }
+}
+*/
