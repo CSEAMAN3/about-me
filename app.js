@@ -91,7 +91,7 @@ function q3() {
   while (work != "yes" && work != "y" && work != "no" && work != "n") {
     alert(`${user}, please answer using Yes, Y, No or N only`);
     work = prompt(
-      "Was I the owner of a local made to measure blind business?"
+      "asW I the owner of a local made to measure blind business?"
     ).toLowerCase();
   }
 
