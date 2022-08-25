@@ -147,13 +147,6 @@ function questionSix() {
   );
 
   for (let i = 3; i >= 0; i--) {
-    // if (i === 0) {
-    //   alert(
-    //     `Unlucky ${user}, that was your final attempt. The number I was thinking of is ${number}.`
-    //   );
-    //   break;
-    // }
-
     if ((i === 0 && guess > number) || (i === 0 && guess < number)) {
       alert(
         `Unlucky ${user}, that was your final attempt. The number I was thinking of is ${number}.`
@@ -231,7 +224,45 @@ Question Seven
 --------------------------*/
 
 function questionSeven() {
-  console.log("q7");
+  let answers = ["mexico", "turkey", "france"];
+
+  let guess = prompt(
+    `Name a country I have visited? You have 6 attampts.`
+  ).toLowerCase();
+
+  for (let i = 5; i >= 0; i--) {
+    if (i === 0) {
+      alert(
+        `You have no more attempts left. The correct answers were Mexico, Turkey and France.`
+      );
+      break;
+    }
+
+    if (guess === answers[0]) {
+      points++;
+      alert(
+        `Correct, I have been to Mexico. You could have also answered Turkey or France`
+      );
+      break;
+    } else if (guess === answers[1]) {
+      points++;
+      alert(
+        `Correct, I have been to Turkey. You could have also answered Mexico or France`
+      );
+      break;
+    } else if (guess === answers[2]) {
+      points++;
+      alert(
+        `Correct, I have been to France. You could have also answered Mexico or Turkey`
+      );
+      break;
+    } else {
+      console.log("lose");
+      guess = prompt(
+        `I have not been to ${guess}! Name a country I have visited? You have ${i} attempts left.`
+      ).toLowerCase();
+    }
+  }
 }
 
 /*---------------------------------------------------
@@ -254,4 +285,7 @@ document.getElementById("quiz-btn").addEventListener("click", function () {
   questionFive();
   questionSix();
   questionSeven();
+
+  alert(`Well done. You answered ${points} out of 7 questions correct`);
+  points = 0;
 });
